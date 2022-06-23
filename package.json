@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "debug": "^4.3.4",
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.4.0"
+  },
+  "scripts": {
+    "dev": "node node_modules/nodemon/bin/nodemon bin/server",
+    "start": "node ./bin/server.js"
+  },
+  "name": "mentions-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
