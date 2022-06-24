@@ -35,7 +35,14 @@ const schema = new Schema({
     tags: [{ //array que receberá varias tags
         type: String,
         require: true
-    }]
+    }],
+   /*image: {
+//imagem é do tipo string para nao salvar a imagem
+//no banco de dados, entao pegamos apenas o caminho.
+        type: String,
+        required: true,
+        trim: true
+    }*/
 });
 
 module.exports = mongoose.model('Product', schema)
