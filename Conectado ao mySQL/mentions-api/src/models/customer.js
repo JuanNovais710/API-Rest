@@ -1,21 +1,21 @@
 'use strict'
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+const db = require('../database');
 
-const schema = new Schema({
+const customer = db.sequelize.define('Customer', {
     name: {
-        type: String,
-        required: true
+        type: db.Sequelize.STRING,
+        allowNull: false
     },
     email: {
-        type: String,
-        required: true
+        type: db.Sequelize.STRING,
+        allowNull: false
     },
     password: {
-        type: String,
-        required: true
+        type: db.Sequelize.STRING,
+        allowNull: false
     }
-
 });
-module.exports = mongoose.model('Customer', schema);
+customer.sync({force: false});
+
+module.exports = customer;

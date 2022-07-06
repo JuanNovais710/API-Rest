@@ -1,6 +1,6 @@
 'use strict'
-const mongoose = require('mongoose');
-const Customer = mongoose.model('Customer');
+const Sequelize = require('sequelize');
+const Customer = require('../models/customer');
 
 exports.get = async () => {
     //se nao retornasse nada, daria erro de req
